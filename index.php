@@ -62,50 +62,30 @@
       </div>
   </main>
 
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Лабораторна 4</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Лабораторна робота №4</h1>
-
-  <div id="currentDate"></div>
-
-<div>
-  <h2>Останній день поточного місяця</h2>
-  <p id="lastDay"></p>
-</div>
-
-  <div>
-    <h2>Перевірка номера телефону</h2>
-    <input type="text" id="phoneInput" placeholder="+38(XXX)XX-XX-XXX">
-    <button onclick="checkPhoneNumber()">Check</button>
+      <div style="margin-top:30px; text-align:center;">
+    <a href="lab4.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №4
+      </button>
+    </a>
   </div>
-
-  <div>
-    <h2>Поміняти місцями ім’я та прізвище</h2>
-    <input type="text" id="nameInput" placeholder="Прізвище Ім’я">
-    <button onclick="swapName()">Swap</button>
-  </div>
-
-  <div>
-    <h2>Цензура тексту</h2>
-    <textarea id="textInput" placeholder="Введіть текст..."></textarea>
-    <button onclick="censorText()">Censor</button>
-    <p id="textOutput"></p>
-  </div>
-
 
     <div style="margin-top:30px; text-align:center;">
-    <a href="lab5.html">
+    <a href="lab5.php">
       <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
         Перейти до лабораторної роботи №5
       </button>
     </a>
   </div>
+
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab6.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №6
+      </button>
+    </a>
+</div>
+
 
 
 
@@ -125,8 +105,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- Твій скрипт -->
-<script src="main.js" defer></script>
-
+<script type="module" src="main.js"></script>
 
 </body>
 </html>

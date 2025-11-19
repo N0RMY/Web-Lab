@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ======== Перевірка телефону ========
 function checkPhoneNumber() {
   const phoneInput = document.getElementById('phoneInput').value;
-  const phoneRegex = /^\+38\(\d{3}\)\d{7}$/;
+  const phoneRegex = /^\+38\(\d{3}\)\d{2}-\d{2}-\d{3}$/;
 
   if (phoneRegex.test(phoneInput)) {
     alert(`Дякуємо! Ваш номер підтверджено: ${phoneInput}`);
