@@ -1,0 +1,135 @@
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+.products {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #005bb5;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ddd;
+  margin-top: 2rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  flex: 1 1 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  width: 100%;
+  height: 1000px; /* висота картинок */
+  object-fit: cover; /* обрізає, щоб вписати у блок */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.current-date { 
+  margin: 2rem; 
+  padding: 1rem; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  font-size: 1.2rem;
+  background-color: #f9f9f9;
+}
+
+
+
+#menu, #menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  padding: 5px 10px;
+  background: #ddd;
+  margin: 2px;
+  cursor: pointer;
+}
+
+#menu li ul li {
+  background: #bbb;
+}
+
+.owl-carousel .item img {
+  width: 500px;          /* Фіксована ширина */
+  height: 500px;         /* Фіксована висота */
+  object-fit: cover;     /* Обрізання по центру, заповнює весь блок */
+  display: block;        /* Прибирає зайві пробіли під зображенням */
+  margin: 0 auto;        /* Центрує картинку в слайді */
+}
+
+
+
+.tooltip {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+#accordion h3 {
+  cursor: pointer;
+}
