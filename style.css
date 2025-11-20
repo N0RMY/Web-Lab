@@ -18,13 +18,11 @@ h1 {
   margin: 0;
 }
 
-<<<<<<< HEAD
-=======
+
 main {
   padding: 2rem;
 }
 
->>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
 .products {
   display: flex;
   gap: 2rem;
@@ -136,49 +134,49 @@ footer {
 #accordion h3 {
   cursor: pointer;
 }
-<<<<<<< HEAD
+.lab-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 10px;
 
-    .tasks-container {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
-.task-box {
+.task-card {
+    width: 330px;
     background: white;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 420px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.task-box input {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
+.task-card input {
+    width: 94%;
+    margin-bottom: 8px;
+    padding: 8px;
     border-radius: 5px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
 }
 
-.task-box button {
+.task-card button {
     width: 100%;
-    padding: 12px;
     background: #1e90ff;
-    border: none;
     color: white;
-    font-size: 16px;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.task-box button:hover {
-    background: #0069d9;
+.task-card button:hover {
+    background: #1876d1;
 }
 
-=======
->>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
