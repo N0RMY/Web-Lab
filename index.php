@@ -84,6 +84,7 @@
         Перейти до лабораторної роботи №6
       </button>
     </a>
+<<<<<<< HEAD
   </div>
 
   <div style="margin-top:30px; text-align:center;">
@@ -93,6 +94,9 @@
       </button>
     </a>
   </div>
+=======
+</div>
+>>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
 
 
 
@@ -119,9 +123,15 @@
 </html>
 
 
+<<<<<<< HEAD
 <footer>
     <p>© <?php echo date("Y"); ?> ElectroShop</p>
 </footer>
+=======
+  <footer>
+    <p>© 2025 ElectroShop. Всі права захищені.</p>
+  </footer>
+>>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
 
 </body>
 </html>

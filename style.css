@@ -18,6 +18,13 @@ h1 {
   margin: 0;
 }
 
+<<<<<<< HEAD
+=======
+main {
+  padding: 2rem;
+}
+
+>>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
 .products {
   display: flex;
   gap: 2rem;
@@ -129,6 +136,7 @@ footer {
 #accordion h3 {
   cursor: pointer;
 }
+<<<<<<< HEAD
 
     .tasks-container {
     display: flex;
@@ -172,3 +180,5 @@ footer {
     background: #0069d9;
 }
 
+=======
+>>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
