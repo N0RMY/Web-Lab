@@ -94,10 +94,8 @@
   <!-- Твій основний JavaScript -->
   <script src="main.js"></script>
 </body>
-<<<<<<< HEAD
+
 <footer>
     <p>© <?php echo date("Y"); ?> ElectroShop</p>
 </footer>
-=======
->>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
 </html>

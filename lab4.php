@@ -63,12 +63,9 @@
     <textarea id="textInput" placeholder="Введіть текст..."></textarea>
     <button onclick="censorText()">Censor</button>
     <p id="textOutput"></p>
-<<<<<<< HEAD
   </div>
 
 <footer>
     <p>© <?php echo date("Y"); ?> ElectroShop</p>
 </footer>
-=======
   </div>
->>>>>>> f54dcef5dcd7c18835981f5179b3bcc4346cbdae
