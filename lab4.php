@@ -64,3 +64,8 @@
     <button onclick="censorText()">Censor</button>
     <p id="textOutput"></p>
   </div>
+
+<footer>
+    <p>© <?php echo date("Y"); ?> ElectroShop</p>
+</footer>
+  </div>
