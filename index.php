@@ -103,6 +103,16 @@
   </div>
 </div>
 
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab9.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №9
+      </button>
+    </a>
+  </div>
+</div>
+
+
 
 
 
