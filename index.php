@@ -112,6 +112,15 @@
   </div>
 </div>
 
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab10.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №10
+      </button>
+    </a>
+  </div>
+</div>
+
 
 
 
