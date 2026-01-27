@@ -84,7 +84,34 @@
         Перейти до лабораторної роботи №6
       </button>
     </a>
+  </div>
+
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab7.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №7
+      </button>
+    </a>
+  </div>
+
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab8.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №8
+      </button>
+    </a>
+  </div>
 </div>
+
+  <div style="margin-top:30px; text-align:center;">
+    <a href="lab9.php">
+      <button style="padding:10px 20px; font-size:16px; cursor:pointer;">
+        Перейти до лабораторної роботи №9
+      </button>
+    </a>
+  </div>
+</div>
+
 
 
 
@@ -111,9 +138,10 @@
 </html>
 
 
-  <footer>
-    <p>© 2025 ElectroShop. Всі права захищені.</p>
-  </footer>
+
+<footer>
+    <p>© <?php echo date("Y"); ?> ElectroShop</p>
+</footer>
 
 </body>
 </html>
