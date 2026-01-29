@@ -1,30 +1,61 @@
 <?php
 require_once __DIR__ . "/db.php";
 
-function get_houses_from_db(int $limit): array
-{
-    global $conn;
+function getCategories(mysqli $conn): array {
+    $rows = [];
+    $res = $conn->query("SELECT id, name FROM categories ORDER BY name");
+    while ($r = $res->fetch_assoc()) $rows[] = $r;
+    return $rows;
+}
 
-    if ($limit < 3) $limit = 3;
-    if ($limit > 60) $limit = 60;
+function getHouses(mysqli $conn, int $limit, string $name, int $min, int $max, int $cat): array {
+    $sql = "
+      SELECT h.*, c.name AS category_name
+      FROM houses h
+      LEFT JOIN categories c ON c.id = h.category_id
+      WHERE 1=1
+        AND h.price BETWEEN ? AND ?
+    ";
 
-    $sql = "SELECT id, name, price, address, phone, image, beds, baths
-            FROM houses
-            ORDER BY id ASC
-            LIMIT ?";
+    $types = "ii";
+    $params = [$min, $max];
 
-    $stmt = $conn->prepare($sql);
-    if (!$stmt) return [];
-
-    $stmt->bind_param("i", $limit);
-    $stmt->execute();
-
-    $result = $stmt->get_result();
-    $houses = [];
-
-    while ($row = $result->fetch_assoc()) {
-        $houses[] = $row;
+    if ($name !== "") {
+        $sql .= " AND h.name LIKE ? ";
+        $types .= "s";
+        $params[] = "%" . $name . "%";
     }
 
-    return $houses;
+    if ($cat > 0) {
+        $sql .= " AND h.category_id = ? ";
+        $types .= "i";
+        $params[] = $cat;
+    }
+
+    $sql .= " ORDER BY h.id DESC LIMIT ? ";
+    $types .= "i";
+    $params[] = $limit;
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param($types, ...$params);
+    $stmt->execute();
+
+    $rows = [];
+    $res = $stmt->get_result();
+    while ($r = $res->fetch_assoc()) $rows[] = $r;
+    return $rows;
+}
+
+function getSliderHouses(mysqli $conn): array {
+    $rows = [];
+    $res = $conn->query("
+      SELECT h.*, c.name AS category_name
+      FROM houses h
+      LEFT JOIN categories c ON c.id = h.category_id
+      WHERE h.is_slider = 1
+      ORDER BY h.id DESC
+      LIMIT 12
+    ");
+    while ($r = $res->fetch_assoc()) $rows[] = $r;
+    return $rows;
 }
