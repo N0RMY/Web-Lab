@@ -1,0 +1,2 @@
+serviceClass: com.mycompany.mywebapp.GreetingService
+path: DCB593DB8621EF5C33679AFEB0F6AF6E.gwt.rpc

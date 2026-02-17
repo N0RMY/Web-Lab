@@ -1,0 +1,7 @@
+<module rename-to="mywebapp">
+  <inherits name="com.google.gwt.user.User"/>
+  <inherits name="com.google.gwt.user.theme.clean.Clean"/>
+  <source path=""/>
+  <entry-point class="com.mycompany.mywebapp.App"/>
+  <set-property name="user.agent" value="gecko1_8,safari"/>
+</module>
