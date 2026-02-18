@@ -33,3 +33,38 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+
+
+#weather {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+#weatherButton {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.weather-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.weather-btn:hover {
+  background: #2563eb;
+}
+
+#weatherContainer iframe {
+  border: 0;
+  width: 100%;
+  border-radius: 12px;
+}
+

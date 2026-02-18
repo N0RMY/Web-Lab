@@ -18,6 +18,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Frame;
+
 
 public class App implements EntryPoint {
 
@@ -188,8 +190,43 @@ public class App implements EntryPoint {
       }
     }
 
-    MyHandler handler = new MyHandler();
-    sendButton.addClickHandler(handler);
-    nameField.addKeyUpHandler(handler);
+
+	// ===== Weather widget (Frame) =====
+	RootPanel weatherButtonPanel = RootPanel.get("weatherButton");
+	RootPanel weatherContainerPanel = RootPanel.get("weatherContainer");
+
+	if (weatherButtonPanel != null && weatherContainerPanel != null) {
+
+	Button weatherBtn = new Button("Показати погоду");
+	weatherBtn.addStyleName("bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg mt-6");
+
+	weatherBtn.addClickHandler(new ClickHandler() {
+		@Override
+		public void onClick(ClickEvent event) {
+		weatherContainerPanel.clear();
+
+		// Тут має бути ТІЛЬКИ src (URL) з Meteoblue
+		String weatherSrc =
+			"https://www.meteoblue.com/en/weather/widget/daily/rivne_ukraine_695594"
+			+ "?geoloc=fixed&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER"
+			+ "&days=7&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1"
+			+ "&windspeed=1&winddirection=1&precipitation=1&precipitationprobability=1"
+			+ "&spot=1&layout=light&user_key=cda6726a9c548908&embed_key=31fd4e7bef7b21db"
+			+ "&sig=0d628fde6730feba308fccf3eb08d8011a511bb4770c3303a618633fe2fdfc45";
+
+		Frame frame = new Frame(weatherSrc);
+		frame.getElement().setAttribute("scrolling", "yes");
+		frame.getElement().setAttribute("frameborder", "0");
+
+		frame.setWidth("100%");
+		frame.setHeight("500px");
+
+		weatherContainerPanel.add(frame);
+		}
+	});
+
+	weatherButtonPanel.add(weatherBtn);
+	}
+
   }
 }
