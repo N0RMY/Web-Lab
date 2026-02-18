@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Lab16 - Results</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <div class="max-w-2xl mx-auto mt-10 bg-white rounded-xl shadow p-8">
+    <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Registration Succeeded!</h2>
+
+    <div class="space-y-3 text-lg">
+      <div class="flex justify-between border-b pb-2">
+        <span class="font-semibold">Full name:</span>
+        <span th:text="${contactForm.name}"></span>
+      </div>
+
+      <div class="flex justify-between border-b pb-2">
+        <span class="font-semibold">E-mail:</span>
+        <span th:text="${contactForm.email}"></span>
+      </div>
+
+      <div class="flex justify-between border-b pb-2">
+        <span class="font-semibold">Phone:</span>
+        <span th:text="${contactForm.phone}"></span>
+      </div>
+
+      <div class="pt-2">
+        <div class="font-semibold mb-2">Message:</div>
+        <div class="bg-gray-50 p-4 rounded-lg" th:text="${contactForm.message}"></div>
+      </div>
+    </div>
+
+    <div class="pt-6">
+      <a class="inline-block text-blue-600 hover:underline" th:href="@{/}">← Back to form</a>
+    </div>
+  </div>
+
+</body>
+</html>
