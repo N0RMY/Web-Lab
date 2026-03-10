@@ -51,7 +51,18 @@ function buildUrl(array $overrides = []): string {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lab11 — Будинки + Лайки + Фільтри + Звіт</title>
+
+    <title>Lab11 — Будинки + Лайки + Фільтри</title>
+
+    <meta name="description" content="Сайт нерухомості з будинками для продажу в Україні. Фільтри, категорії, слайдер та інформація про будинки.">
+    <meta name="keywords" content="нерухомість, будинки Україна, купити будинок, real estate Ukraine, houses for sale, villas Ukraine">
+    <meta name="author" content="Yura Hurich">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Real Estate Ukraine">
+    <meta property="og:description" content="Будинки та вілли для продажу в Україні">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/house1.webp">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -93,7 +104,7 @@ function buildUrl(array $overrides = []): string {
                     <div class="min-w-[280px] bg-white rounded-2xl shadow p-4">
                         <img class="rounded-xl w-full h-40 object-cover"
                              src="<?= h((string)$hRow["image"]) ?>"
-                             alt="<?= h((string)$hRow["name"]) ?>">
+                             alt="<?= h((string)$hRow["name"]) ?> house in <?= h((string)$hRow["address"]) ?>">
 
                         <div class="mt-3">
                             <div class="font-semibold text-lg"><?= h((string)$hRow["name"]) ?></div>
@@ -176,7 +187,7 @@ function buildUrl(array $overrides = []): string {
                     <article class="bg-white rounded-2xl shadow p-4">
                         <img class="rounded-xl w-full h-44 object-cover"
                              src="<?= h((string)$hRow["image"]) ?>"
-                             alt="<?= h((string)$hRow["name"]) ?>">
+                             alt="<?= h((string)$hRow["name"]) ?> house located in <?= h((string)$hRow["address"]) ?>">
 
                         <div class="mt-3">
                             <h3 class="text-lg font-semibold"><?= h((string)$hRow["name"]) ?></h3>
